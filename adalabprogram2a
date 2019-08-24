@@ -1,0 +1,42 @@
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main()
+{
+	int n,a[20],i,j,k,t,min,index,flag;
+	clock_t start,end;
+	cout<<"\nEnter the limit:";
+	cin>>n;
+	cout<<"\nEnter "<<n<<" elements :";
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	cout<<"\nEnter the value for k:";
+	cin>>k;	
+	start=clock();
+	{
+	for(i=0;i<k;i++)
+    {
+		min=a[i];
+		flag=0;
+		for(j=i+1;j<n;j++)
+		{
+			if(a[j]<min)
+			{
+				min=a[j];
+				index=j;
+				flag=1;
+			}
+		}
+		if(flag==1)
+		{
+			t=a[i];
+			a[i]=a[index];
+			a[index]=t;
+		}
+	}
+	}
+	end=clock();
+	double t1=((double)(end-start))/CLOCKS_PER_SEC;
+	cout<<"\n"<<k<<"th smallest no is:"<<a[k-1]<<"\n Time is:"<<t1;
+	return 0;	
+}
