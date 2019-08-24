@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-	int n,a[20],i,j,k,t,min,index,flag;
+	int n,a[20],i,j,k,t,min;
 	clock_t start,end;
 	cout<<"\nEnter the limit:";
 	cin>>n;
