@@ -30,8 +30,6 @@ int main()
 	end=clock();
 	double t1=((double)(end-start))/CLOCKS_PER_SEC;
 	cout<<"\n"<<k<<"th smallest no:"<<a[k-1];
-	/*for(i=0;i<n;i++)
-		cout<<" "<<a[i];*/
 	cout<<"\nTime is:"<<t1<<"\n";
 	return 0;	
 }
