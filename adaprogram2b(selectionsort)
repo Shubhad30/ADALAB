@@ -32,7 +32,7 @@ int main()
 	}
 	end=clock();
 	double t1=((double)(end-start))/CLOCKS_PER_SEC;
-	cout<<"\n"<<k<<" smallest nos:";
+	cout<<"\n"<<k<<" smallest no:";
 	for(i=0;i<k;i++)
 		cout<<" "<<a[i];
 	cout<<"\nTime is:"<<t1<<"\n";
