@@ -16,27 +16,22 @@ int main()
 	{
 	for(i=0;i<k;i++)
     {
-		min=a[i];
-		flag=0;
+		min=i;
 		for(j=i+1;j<n;j++)
 		{
-			if(a[j]<min)
-			{
-				min=a[j];
-				index=j;
-				flag=1;
-			}
+			if(a[j]<a[min])
+				min=j;
 		}
-		if(flag==1)
+		if(min!=i)
 		{
 			t=a[i];
-			a[i]=a[index];
-			a[index]=t;
+			a[i]=a[min];
+			a[min]=t;
 		}
 	}
 	}
 	end=clock();
 	double t1=((double)(end-start))/CLOCKS_PER_SEC;
-	cout<<"\n"<<k<<"th smallest no is:"<<a[k-1]<<"\n Time is:"<<t1;
+	cout<<"\n"<<k<<"th smallest no is:"<<a[k-1]<<"\n Time is:"<<t1<<"\n";
 	return 0;	
 }
