@@ -28,7 +28,7 @@ int main()
 	}
 	}
 	end=clock();
-	double t1=((double)(end-start))/CLOCKS_PER_SEC;
+	double t1=((double)(end-start))/(double)(CLOCKS_PER_SEC);
 	cout<<" \n"<<k<<" Largest values:";
 	for(i=0;i<k;i++)
 		cout<<" "<<a[i];
