@@ -31,7 +31,7 @@ int main()
 	}
 	}
 	end=clock();
-	double t1=((double)(end-start))/CLOCKS_PER_SEC;
+	double t1=((double)(end-start))/(double)CLOCKS_PER_SEC;
 	cout<<"\n"<<k<<"th smallest no is:"<<a[k-1]<<"\n Time is:"<<t1<<"\n";
 	return 0;	
 }
