@@ -1,6 +1,9 @@
+c3=0
 def merge(l1,l2,l):
+        global c3
         i,j,k=0,0,0
         while(i<len(l1) and j<len(l2)):
+            c3+=1
             if(l1[i]<l2[j]):
                 l[k]=l1[i]
                 i+=1
@@ -29,3 +32,4 @@ def mergesort(l):
 l1=list(map(int,input("Enter the elements:").split()))
 mergesort(l1)
 print("Sorted list:`",l1)
+print("No of comparisons:",c3)
